@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cahier des charges</string>
+
+    <string name="login_title">Connexion</string>
+
+    <string name="list_title">Projets enregistrés</string>
+
+    <string name="detail_title">Détail du projet</string>
+
+</resources>
