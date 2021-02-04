@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/projectsListFragment2">
+
+    <fragment
+        android:id="@+id/projectsListFragment2"
+        android:name="com.ilv.cahierdescharges.list.ProjectsListFragment"
+        android:label="ProjectsListFragment" >
+        <action
+            android:id="@+id/action_projectsListFragment2_to_projectsDetailsFragment2"
+            app:destination="@id/projectsDetailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/projectsDetailsFragment2"
+        android:name="com.ilv.cahierdescharges.details.ProjectsDetailsFragment"
+        android:label="ProjectsDetailsFragment" >
+        <argument
+            android:name="project"
+            app:argType="com.ilv.cahierdescharges.model.Project" />
+    </fragment>
+</navigation>
