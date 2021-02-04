@@ -2,6 +2,61 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="500dp">
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_projet"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <RelativeLayout
+            android:id="@+id/relative"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/card_name_client"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:text="Guillon Axel"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                style="@style/TitleCard"
+                />
+
+            <TextView
+                android:id="@+id/card_title_project"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="Nom du projet"
+                android:layout_below="@+id/card_name_client"/>
+
+            <TextView
+                android:id="@+id/card_mail"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:text="monmail@gmail.com"
+                android:layout_below="@+id/card_title_project"/>
+
+            <TextView
+                android:id="@+id/card_date"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="01/02/2021"
+                android:layout_below="@+id/card_mail"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,10 @@ import java.util.*
 
 @Parcelize
 data class Project(
+    val nomClient: String,
+    val nomPojet: String,
+    val mail: String,
+    val dateSoumission: String,
     val site: String,
     val cibles: List<String>,
     val objectifs: String,
@@ -28,6 +32,10 @@ data class Project(
 ) : Parcelable
 
 fun generateRandomProject() = Project(
+    nomClient = "Guillon Axel",
+    nomPojet = "Exemple nom de projet",
+    mail = "monmail@gmail.com",
+    dateSoumission = "01/02/2021",
     site = "site vitrine",
     cibles = listOfNotNull("Entreprises", "Associations"),
     objectifs = "Le but est de gérer les data de nos clients, pouvoir tout centraliser.",
