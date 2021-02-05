@@ -28,6 +28,7 @@
     <style name="ValueProject">
         <item name="android:text">value</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">14sp</item>
         <item name="android:layout_marginStart">10dp</item>
     </style>

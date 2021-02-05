@@ -22,6 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nom du projet :"
+        android:textSize="14dp"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -40,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Type de site :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/nom_projet" />
@@ -58,6 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Objectifs :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/type_site" />
@@ -76,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dates :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/objectifs" />
@@ -113,6 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fonctionnalités :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/dates" />
@@ -131,6 +137,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Besoins précis :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/fonctionnalites" />
@@ -149,6 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre de pages :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/besoins_precis" />
@@ -166,7 +174,8 @@
         android:id="@+id/creation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Est ce une création :"
+        android:text="Est-ce une création :"
+        android:textColor="@color/dark_grey"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/pages" />
