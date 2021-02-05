@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,22 +40,13 @@ class ProjectsListFragment : Fragment(){
         generateRandomProject(),
         generateRandomProject(),)
 
-        binding.projectsList.adapter = Adapter(projects = projectsList)
+        val navController = findNavController()
 
-
-
-
-        /*binding.button.setOnClickListener{
-            findNavController().navigate(
-                    ProjectsListFragmentDirections.actionProjectsListFragmentToProjectsDetailsFragment(
-                            generateRandomProject()
-                    )
-            )
-        }*/
+        binding.projectsList.adapter = Adapter(projects = projectsList, navController)
     }
 }
 
-class Adapter(val projects: List<Project>) : RecyclerView.Adapter<ViewHolder>(){
+class Adapter(val projects: List<Project>, val navController: NavController) : RecyclerView.Adapter<ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -63,7 +55,15 @@ class Adapter(val projects: List<Project>) : RecyclerView.Adapter<ViewHolder>(){
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindProject(projects[position])
+        val project = projects[position]
+        holder.bindProject(project)
+        holder.itemView.setOnClickListener{
+            navController.navigate(
+                ProjectsListFragmentDirections.actionProjectsListFragmentToProjectsDetailsFragment(
+                    generateRandomProject()
+                )
+            )
+        }
     }
 
     override fun getItemCount(): Int {

@@ -2,18 +2,18 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_app"
-    app:startDestination="@id/projectsListFragment2">
+    app:startDestination="@id/projectsListFragment">
 
     <fragment
-        android:id="@+id/projectsListFragment2"
+        android:id="@+id/projectsListFragment"
         android:name="com.ilv.cahierdescharges.list.ProjectsListFragment"
         android:label="ProjectsListFragment" >
         <action
-            android:id="@+id/action_projectsListFragment2_to_projectsDetailsFragment2"
-            app:destination="@id/projectsDetailsFragment2" />
+            android:id="@+id/action_projectsListFragment_to_projectsDetailsFragment"
+            app:destination="@id/projectsDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/projectsDetailsFragment2"
+        android:id="@+id/projectsDetailsFragment"
         android:name="com.ilv.cahierdescharges.details.ProjectsDetailsFragment"
         android:label="ProjectsDetailsFragment" >
         <argument

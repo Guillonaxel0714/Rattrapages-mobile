@@ -1,15 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/title"
+        style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="bonjour"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/detail_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nom_projet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom du projet :"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/value_name_project"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@id/nom_projet"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/type_site"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type de site :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/nom_projet" />
+
+    <TextView
+        android:id="@+id/value_type_site"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toEndOf="@id/type_site"
+        app:layout_constraintTop_toBottomOf="@+id/value_name_project" />
+
+    <TextView
+        android:id="@+id/objectifs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Objectifs :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/type_site" />
+
+    <TextView
+        android:id="@+id/value_objectifs"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toEndOf="@id/objectifs"
+        app:layout_constraintTop_toBottomOf="@+id/value_type_site" />
+
+    <TextView
+        android:id="@+id/dates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dates :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/objectifs" />
+
+    <TextView
+        android:id="@+id/value_date_debut"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/dates"
+        app:layout_constraintTop_toBottomOf="@+id/value_objectifs" />
+
+    <TextView
+        android:id="@+id/au"
+        android:text="au"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/value_date_debut"
+        app:layout_constraintTop_toBottomOf="@+id/value_objectifs" />
+
+    <TextView
+        android:id="@+id/value_date_fin"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/au"
+        app:layout_constraintTop_toBottomOf="@+id/value_objectifs" />
+
+    <TextView
+        android:id="@+id/fonctionnalites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fonctionnalités :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/dates" />
+
+    <TextView
+        android:id="@+id/value_fonction"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/fonctionnalites"
+        app:layout_constraintTop_toBottomOf="@+id/value_date_debut" />
+
+    <TextView
+        android:id="@+id/besoins_precis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Besoins précis :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/fonctionnalites" />
+
+    <TextView
+        android:id="@+id/value_besoins_precis"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/besoins_precis"
+        app:layout_constraintTop_toBottomOf="@+id/value_fonction" />
+
+    <TextView
+        android:id="@+id/pages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de pages :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/besoins_precis" />
+
+    <TextView
+        android:id="@+id/value_pages"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/pages"
+        app:layout_constraintTop_toBottomOf="@+id/value_besoins_precis" />
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
