@@ -38,7 +38,8 @@ class ProjectsListFragment : Fragment(){
         val projectsList = listOf(generateRandomProject(),
         generateRandomProject(),
         generateRandomProject(),
-        generateRandomProject(),)
+        generateRandomProject(),
+        )
 
         val navController = findNavController()
 

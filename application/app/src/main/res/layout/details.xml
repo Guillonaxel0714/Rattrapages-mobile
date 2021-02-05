@@ -162,6 +162,24 @@
         app:layout_constraintStart_toEndOf="@id/pages"
         app:layout_constraintTop_toBottomOf="@+id/value_besoins_precis" />
 
+    <TextView
+        android:id="@+id/creation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Est ce une création :"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/pages" />
+
+    <TextView
+        android:id="@+id/value_creation"
+        style="@style/ValueProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@id/creation"
+        app:layout_constraintTop_toBottomOf="@+id/value_pages" />
+
 
 
 

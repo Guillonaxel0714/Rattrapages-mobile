@@ -30,6 +30,7 @@ class ProjectsDetailsFragment : Fragment(){
             binding.valueFonction.text = fonctionnalite
             binding.valueBesoinsPrecis.text = precisionBesoins
             binding.valuePages.text = pages
+            binding.valueCreation.text = creation.toString()
         }
 
     }
